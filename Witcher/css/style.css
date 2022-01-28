@@ -1,0 +1,151 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Mason Chronicles';
+    src: url('../fonts/masonchronicles.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/masonchronicles.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+         url('../fonts/masonchronicles.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/masonchronicles.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+         url('../fonts/masonchronicles.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/masonchronicles.svg#masonchronicles') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+body {
+    background-color: #141218;
+
+    background-image: url('../img/site-elements/background.jpg');
+    background-repeat: no-repeat;
+    background-position: top right 20%;
+
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1134px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 68px;
+}
+
+.header__nav {
+    display: inline-block;
+}
+
+.nav__link {
+    margin-right: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav__link:last-child {
+    margin-right: 0;
+}
+
+.socials__icon {
+    margin-right: 20px;
+}
+
+.socials__icon:last-child {
+    margin-right: 0;
+}
+
+.content {
+    margin-top: 94px;
+    max-width: 975px;
+    position: relative;
+}
+
+.content__rating {
+    margin-top: 16px;
+}
+
+.rating__value {
+    font-size: 12px;
+}
+
+.content__title {
+    margin-top: 10px;
+    font-family: 'Mason Chronicles', sans-serif;
+    font-size: 76px;
+}
+
+.content__description {
+    margin-top: 10px;
+    max-width: 458px;
+}
+
+.content__button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 22px 72px;
+    background-color: #9C2929FF;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+.content__series {
+    max-width: 420px;
+}
+
+.series__card {
+
+}
+
+.series1 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%), url("../img/series/seria-1.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.series2 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%) no-repeat, url("../img/series/seria-2.png");
+}
+
+.series3 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%) no-repeat, url("../img/series/seria-3.jpg");
+}
+
+.series4 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%) no-repeat, url("../img/series/seria-4.jpg");
+}
+
+.series5 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%) no-repeat, url("../img/series/seria-5.jpg");
+}
+
+.series6 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%) no-repeat, url("../img/series/seria-6.jpg");
+}
+
+.series7 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%) no-repeat, url("../img/series/seria-7.jpg");
+}
+
+.series8 {
+    background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%) no-repeat, url("../img/series/seria-8.jpg");
+}
+
+.content__play-button {
+    position: absolute;
+    top: 125px;
+    right: 0;
+}
+
+.content__play-button:before {
+    content: '/';
+    background-color: red;
+    width: 125px;
+    height: 125px;
+}

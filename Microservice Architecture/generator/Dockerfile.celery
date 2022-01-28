@@ -1,0 +1,3 @@
+FROM celery
+
+RUN -A celery_app worker -l INFO _Q generator

@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  generator:
+    container_name: generator
+    build:
+      context: ./generator
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8081:8000"
+      -
+  index:
+    container_name: index
+    build:
+      context: ./index
+    command: python manage.py runserver 0.0.0.0:8001
+    ports:
+      - "8080:8001"
+    depends_on:
+      - generator
+
+  celery:
+    container_name: celery
+    build:
+      context: ./generator
+      dockerfile: Dockerfile.celery
+    ports:
+      -

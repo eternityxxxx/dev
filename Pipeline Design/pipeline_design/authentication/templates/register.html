@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form method="post" class="registerForm">
+            {% csrf_token %}
+            {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                    <span>{{ error|escape }}</span>
+                {% endfor %}
+            {% endif %}
+            <div class="registerInput">
+                <label for="email">Email</label>
+                <div id="email">{{ form.email }}</div>
+            </div>
+            <div class="registerInput">
+                <label for="email2">Email Confirm</label>
+                <div id="email2">{{ form.email2 }}</div>
+            </div>
+            <div class="registerInput">
+                <label for="username">Username</label>
+                <div id="username">{{ form.username }}</div>
+            </div>
+            <div class="registerInput">
+                <label for="password">Password</label>
+                <div id="password">{{ form.password }}</div>
+            </div>
+            <div class="registerBtn">
+                <input type="submit" value="Create Account">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

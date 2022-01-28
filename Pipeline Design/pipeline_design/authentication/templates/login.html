@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form method="post" class="loginForm">
+            {% csrf_token %}
+            {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                    <span>{{ error|escape }}</span>
+                {% endfor %}
+            {% endif %}
+            <div class="loginInput">
+                <label for="username">Username</label>
+                <div id="username">{{ form.username }}</div>
+            </div>
+            <div class="loginInput">
+                <label for="password">Password</label>
+                <div id="password">{{ form.password }}</div>
+            </div>
+            <div class="loginBtn">
+                <input type="submit" value="Continue">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

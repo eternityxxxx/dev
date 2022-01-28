@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.btn {
+    width: 100px;
+    height: 25px;
+
+    background: cornflowerblue;
+    color: white;
+
+    text-align: center;
+}
+
+.buttonText {
+    font-family: 'Fira Code', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hide {
+
+}
